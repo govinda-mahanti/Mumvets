@@ -48,11 +48,11 @@ const handleBooking = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-14 gap-8 p-6 md:w-[85%] mx-auto">
         <div className="relative row-span-4 col-span-1 md:col-span-5 bg-[#6A7AFF] text-white rounded-4xl p-6 flex flex-col md:flex-row items-center justify-around">
-          <div className="flex items-center justify-center mb-5 md:flex-col">
+          <div className="flex items-center justify-center mb-5 flex-col">
             <img
               src={logo}
               alt="Mumvets Logo"
-              className="h-10 w-auto md:h-[150px] md:mb-5 z-1"
+              className="h-30 w-auto md:h-[150px] md:mb-5 z-1"
             />
             <img src={ pawss} alt="" className="absolute top-5 right-1.5"/>
             <img src={ pawss} alt="" className="absolute top-20 right-5"/>
@@ -285,7 +285,7 @@ const handleBooking = () => {
             </p>
             <button
               className="cursor-pointer mt-4 bg-white text-[#6A7AFF] px-4 py-2 rounded-lg font-semibold"
-              onClick={handleBooking}
+              onClick={() => navigate("/petgrooming")}
             >
               Read More
             </button>

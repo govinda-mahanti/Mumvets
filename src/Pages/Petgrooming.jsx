@@ -23,7 +23,9 @@ const Petgrooming = () => {
       </ul>
       
       <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
-        <button className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base w-full sm:w-auto">Call Now</button>
+        <button className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base w-full sm:w-auto"
+        onClick={() => window.location.href = "tel:+919326471539"}
+        >Call Now</button>
         {/* <div className="flex space-x-2 mt-4 sm:mt-0">
           <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">⬅️</button>
           <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">➡️</button>
