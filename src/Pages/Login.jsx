@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import pet from "../assets/login/pet 1.svg";
 import google from "../assets/login/google.svg";
-import { BASE_URL } from "../Utils/Urlconfig";
+import { BASE_URL } from "../Utils/urlconfig";
 import { setCredentials } from "../redux/authSlice";
 import { useState } from "react";
 import { useDispatch } from "react-redux";

@@ -8,7 +8,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import axios from "axios";
-import { BASE_URL } from "../Utils/Urlconfig";
+import { BASE_URL } from "../Utils/urlconfig";
 import { useSelector } from "react-redux";
 
 const Contactus = () => {

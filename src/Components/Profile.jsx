@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import { logOut } from "../redux/authSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { BASE_URL } from "../Utils/Urlconfig";
+import { BASE_URL } from "../Utils/urlconfig";
 
 const Profile = ({ setShowProfile }) => {
   const dispatch = useDispatch();

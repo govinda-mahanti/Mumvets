@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { BASE_URL } from "../Utils/Urlconfig";
+import { BASE_URL } from "../Utils/urlconfig";
 const Booking = () => {
   const [formData, setFormData] = useState({
     ownerName: "",
