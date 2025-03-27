@@ -64,7 +64,7 @@ const Navbar = ({ setShowProfile }) => {
           </NavLink>
         )}
         <a href="tel:9326471539">
-          <button className="bg-orange-500 text-white px-5 py-2 rounded-full font-medium shadow-md hover:bg-orange-600">Call On 786420810</button>
+          <button className="bg-orange-500 text-white px-5 py-2 rounded-full font-medium shadow-md hover:bg-orange-600">Call On 9326471539</button>
         </a>
       </div>
 
@@ -101,7 +101,7 @@ const Navbar = ({ setShowProfile }) => {
           <NavLink to="/services" onClick={() => setIsOpen(false)}>Our Service</NavLink>
           <button onClick={handleBooking} className="text-left">Tracking</button>
           <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
-          <a href="tel:9326471539" onClick={() => setIsOpen(false)}>Call On 786420810</a>
+          <a href="tel:9326471539" onClick={() => setIsOpen(false)}>Call On 9326471539</a>
           {isAuthenticated && (
             <button onClick={handleLogout} className="mt-4 bg-red-500 text-white px-4 py-2 rounded-full font-medium shadow-md hover:bg-red-600 w-full">Logout</button>
           )}
