@@ -67,12 +67,10 @@ const Contactus = () => {
   };
   return (
     <div>
-          <h2 className="text-3xl font-bold text-center mb-4 mt-8">
-            Contact Us
-          </h2>
-          <p className="text-center mb-6">
-            Any question or remarks? Just write us a message!
-          </p>
+      <h2 className="text-3xl font-bold text-center mb-4 mt-8">Contact Us</h2>
+      <p className="text-center mb-6">
+        Any question or remarks? Just write us a message!
+      </p>
       <div className=" md:w-[60%] md:mx-auto flex flex-col md:flex-row justify-center items-stretch min-h-[80%] p-4 md:gap-0 my-10">
         <div className=" bg-indigo-500 relative text-white p-8 md:w-[40%] w-full shadow-lg rounded-tl-2xl md:rounded-bl-2xl rounded-tr-2xl md:rounded-tr-[0px] overflow-hidden">
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
@@ -98,9 +96,26 @@ const Contactus = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-8 md:mt-20">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+            >
             <TwitterIcon className="text-black bg-white rounded-full p-1 w-10 h-10" />
-            <InstagramIcon className="text-black bg-white rounded-full p-1 w-10 h-10" />
+            </a>
+            <a
+              href="https://wa.me/+919326471539"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
             <WhatsAppIcon className="text-green-500 bg-white rounded-full p-1 w-10 h-10" />
+            </a>
+            <a
+              href="https://www.instagram.com/mumvets1?igsh=a3M4NnYzdTc2Yzcy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            <InstagramIcon className="text-black bg-white rounded-full p-1 w-10 h-10" />
+            </a>
           </div>
 
           {/* Background Overlays */}
@@ -111,7 +126,6 @@ const Contactus = () => {
         </div>
 
         <div className="bg-white p-8 shadow-lg md:w-[60%] w-full md:mt-0 md:rounded-tr-2xl rounded-br-2xl  rounded-bl-2xl md:rounded-bl-[0px]">
-
           <form onSubmit={handleSubmit}>
             {/* Name Inputs */}
             <div className="grid md:grid-cols-2 gap-4">
@@ -122,8 +136,7 @@ const Contactus = () => {
                   name="firstName"
                   className="border-b border-black p-2 outline-none w-full"
                   onChange={handleChange}
-                  value={formData.firstName} 
-
+                  value={formData.firstName}
                   required
                 />
               </div>
@@ -132,8 +145,8 @@ const Contactus = () => {
                 <input
                   type="text"
                   name="lastName"
-                  value={formData.lastName} 
-                  onChange={handleChange} 
+                  value={formData.lastName}
+                  onChange={handleChange}
                   className="border-b border-black p-2 outline-none w-full text-gray-700"
                 />
               </div>
@@ -148,8 +161,7 @@ const Contactus = () => {
                   name="email"
                   className="border-b border-black p-2 outline-none w-full"
                   onChange={handleChange}
-                  value={formData.email} 
-
+                  value={formData.email}
                   required
                 />
               </div>
@@ -174,7 +186,7 @@ const Contactus = () => {
                 <input
                   type="radio"
                   name="subject"
-                  value={1} 
+                  value={1}
                   checked={formData.subject === 1}
                   onChange={handleChange}
                   className="mr-2"
@@ -185,7 +197,7 @@ const Contactus = () => {
                 <input
                   type="radio"
                   name="subject"
-                  value={2} 
+                  value={2}
                   checked={formData.subject === 2}
                   onChange={handleChange}
                   className="mr-2"

@@ -5,6 +5,10 @@ import img3 from "../assets/about/img3.png";
 import img4 from "../assets/about/img4.png";
 import vetu from "../assets/about/vetu 1.png";
 import group from "../assets/about/Group 8728.png";
+import axios from "axios"
+
+import { useSelector } from "react-redux";
+import { BASE_URL } from "../Utils/urlconfig";
 const Aboutus = () => {
   const doctors = [
     {
@@ -29,20 +33,47 @@ const Aboutus = () => {
     },
   ];
 
+  const token =
+  useSelector((state) => state.auth.token) || localStorage.getItem("token");
+
+
+
+ 
+
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
-    comments: "",
+    comments: ""
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // Handle submission logic (API, email, etc.)
+    setLoading(true);
+    try {
+      const response = await axios.post("https://mumvets.com/api/joinTeam", formData, {
+        headers: {
+          Authorization: `${token}`,
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (response.status === 200) {
+        alert("Form submitted successfully!");
+        setFormData({ name: "", mobile: "", comments: "" });
+      } else {
+        alert("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Error submitting form. Please try again later.")
+    }
+    setLoading(false);
   };
   return (
     <div>
@@ -120,44 +151,42 @@ const Aboutus = () => {
       <div className="flex flex-col gap-3 md:flex-row items-center justify-between px-6 py-12 md:px-16 lg:px-24 md:w-[90%] mx-auto">
         {/* Left Section (Text & Form) */}
         <div className="md:w-1/2 w-full">
-          <form
-            className="mt-6 space-y-4 flex flex-col items-center md:w-[400px]"
-            onSubmit={handleSubmit}
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
-              required
-            />
-            <input
-              type="tel"
-              name="mobile"
-              placeholder="Mobile No"
-              value={formData.mobile}
-              onChange={handleChange}
-              className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
-              required
-            />
-            <textarea
-              name="comments"
-              placeholder="Comments"
-              value={formData.comments}
-              onChange={handleChange}
-              rows="3"
-              className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
-            ></textarea>
+        <form className="mt-6 space-y-4 flex flex-col items-center md:w-[400px]" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
+        required
+      />
+      <input
+        type="tel"
+        name="mobile"
+        placeholder="Mobile No"
+        value={formData.mobile}
+        onChange={handleChange}
+        className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
+        required
+      />
+      <textarea
+        name="comments"
+        placeholder="Comments"
+        value={formData.comments}
+        onChange={handleChange}
+        rows="3"
+        className="w-full p-3 rounded-md bg-pink-100 border border-gray-300 focus:ring-2 focus:ring-orange-400"
+      ></textarea>
 
-            <button
-              type="submit"
-              className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-3xl hover:bg-orange-600 transition"
-            >
-              Submit
-            </button>
-          </form>
+      <button
+        type="submit"
+        className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-3xl hover:bg-orange-600 transition"
+        disabled={loading}
+      >
+        {loading ? "Submitting..." : "Submit"}
+      </button>
+    </form>
         </div>
 
         {/* Right Section (Images) */}

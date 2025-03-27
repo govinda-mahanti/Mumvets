@@ -115,7 +115,7 @@ const Home = () => {
             Veterinary Company <br /> in Mumbai
           </h1>
           <p className="text-gray-600 mt-2 text-right text-sm md:text-xl">
-            As Mumbai’s leading animal health company, Munvets is driven by a
+            As Mumbai’s leading animal health company, Mumvets is driven by a
             singular purpose: to nurture Mumbai and humankind by advancing care
             for animals.
           </p>
