@@ -36,10 +36,6 @@ const Aboutus = () => {
   const token =
   useSelector((state) => state.auth.token) || localStorage.getItem("token");
 
-
-
- 
-
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",

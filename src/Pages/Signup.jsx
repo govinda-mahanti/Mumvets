@@ -54,25 +54,25 @@ const Signup = () => {
     }
   };
 
+
   const handleGoogleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const idToken = await result.user.getIdToken();
-  
-      // Send token in the required format
-      const response = await axios.post("https://mumvets.com/auth/google", {
-        idToken: idToken, // Correct format
+
+      // Send the Google token to the backend
+      const response = await axios.post(`${BASE_URL}/auth/google`, {
+        idToken: idToken,
       });
-  
+
       const { token, user } = response.data;
-  
+
+      // Store user data and token in Redux and local storage
+      dispatch(setCredentials({ user, token }));
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      console.log(token)
-  
-      dispatch(setCredentials({ user, token }));
-  
-      alert("Signed in successfully!");
+
+      alert("Google Sign-in successful!");
       navigate("/");
     } catch (error) {
       console.error("Google Sign-In Error:", error.message);
