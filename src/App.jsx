@@ -12,7 +12,7 @@ import Login from "./Pages/Login"
 import Signup from "./Pages/Signup";
 import Petgrooming from "./Pages/Petgrooming";
 import Vetconsultation from "./Pages/Vetconsultation";
-
+import ResetPass from "./Pages/ResetPass";
 function App() {
   return (
     <Router>
@@ -28,6 +28,8 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="petgrooming" element={<Petgrooming />} />
           <Route path="vetconsultation" element={<Vetconsultation />} />
+          <Route path="resetpassword" element={<ResetPass />} />
+
 
         </Route>
       </Routes>

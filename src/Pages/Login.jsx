@@ -65,6 +65,10 @@ const Login = () => {
     }
   };
 
+  const handleForgotPasswordClick = () => {
+    navigate("/resetpassword");
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 my-10 md:w-[60%] mx-auto w-[90%]">
@@ -108,9 +112,12 @@ const Login = () => {
               className="w-full px-4 py-2 border rounded mb-2"
               required
             />
-            <a href="#" className="text-sm text-blue-600">
+            <span
+              onClick={handleForgotPasswordClick}
+              className="text-sm text-blue-600 cursor-pointer"
+            >
               Forgot password?
-            </a>
+            </span>
 
             <button
               type="submit"
