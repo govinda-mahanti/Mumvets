@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/auth': {
-        target: 'https://mumvets.com', // Backend URL
+        target: 'http://backend.mumvets.com', // Backend URL
         changeOrigin: true,
         secure: false,
       },

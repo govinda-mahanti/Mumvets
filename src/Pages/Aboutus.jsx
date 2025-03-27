@@ -56,7 +56,7 @@ const Aboutus = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://mumvets.com/api/joinTeam", formData, {
+      const response = await axios.post(`${BASE_URL}/api/joinTeam`, formData, {
         headers: {
           Authorization: `${token}`,
           "Content-Type": "application/json"

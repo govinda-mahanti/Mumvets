@@ -11,6 +11,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { useSelector } from "react-redux";
 import right from "../assets/home/right.svg";
 import add from "../assets/home/add.svg";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -104,32 +105,52 @@ const Home = () => {
   };
   return (
     <div>
-      <div className="w-full relative rounded-lg md:max-w-[95%] p-10 md:p-0 h-full mt-10 mx-auto flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-[40%] flex items-end justify-items-end h-full">
-          <img src={dog} alt="Dog" className="rounded-lg  h-auto md:ml-15" />
-        </div>
+     <motion.div
+      className="w-full relative rounded-lg md:max-w-[95%] p-10 md:p-0 h-full mt-10 mx-auto flex flex-col md:flex-row items-center"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {/* Image Section */}
+      <motion.div
+        className="w-full md:w-[40%] flex items-end justify-items-end h-full"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      >
+        <img src={dog} alt="Dog" className="rounded-lg h-auto md:ml-15" />
+      </motion.div>
 
-        {/* Text Content */}
-        <div className="w-full md:pr-[100px] md:w-[60%] md:pl-6 mt-6 md:mt-0 flex items-end flex-col md:text-left">
-          <h1 className="text-[29px] md:text-[64px] font-bold text-gray-800 leading-snug text-right">
-            Veterinary Company <br /> in Mumbai
-          </h1>
-          <p className="text-gray-600 mt-2 text-right text-sm md:text-xl">
-            As Mumbai’s leading animal health company, Mumvets is driven by a
-            singular purpose: to nurture Mumbai and humankind by advancing care
-            for animals.
-          </p>
+      {/* Text Content */}
+      <motion.div
+        className="w-full md:pr-[100px] md:w-[60%] md:pl-6 mt-6 md:mt-0 flex items-end flex-col md:text-left"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+      >
+        <h1 className="text-[29px] md:text-[64px] font-bold text-gray-800 leading-snug text-right">
+          Veterinary Company <br /> in Mumbai
+        </h1>
+        <p className="text-gray-600 mt-2 text-right text-sm md:text-xl">
+          As Mumbai’s leading animal health company, Mumvets is driven by a
+          singular purpose: to nurture Mumbai and humankind by advancing care
+          for animals.
+        </p>
 
-          {/* Reviews Section */}
-          <div className="mt-4 bg-orange-300 px-4 py-2 rounded-lg flex flex-col items-center justify-center md:justify-start w-max mx-auto md:mx-0">
-            <div className="flex -space-x-2">
-              {/* Replace with actual avatars */}
-              <img className="w-[200px] " src={Avatarss} alt="User 1" />
-            </div>
-            <div className="ml-3 text-gray-800 text-2xl">100+ Reviews</div>
+        {/* Reviews Section */}
+        <motion.div
+          className="mt-4 bg-orange-300 px-4 py-2 rounded-lg flex flex-col items-center justify-center md:justify-start w-max mx-auto md:mx-0"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+        >
+          <div className="flex -space-x-2">
+            <img className="w-[200px] " src={Avatarss} alt="User 1" />
           </div>
-        </div>
-      </div>
+          <div className="ml-3 text-gray-800 text-2xl">100+ Reviews</div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
 
       <div className="bg-orange-300 p-6 md:p-[40px] rounded-xl w-[90%] md:w-[83%] mx-auto">
         {/* Header Section */}

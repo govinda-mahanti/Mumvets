@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import logo from "../assets/logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -44,7 +45,7 @@ const Navbar = ({ setShowProfile }) => {
         <img src={logo} alt="Mumvets Logo" className="h-10 w-auto" />
       </div>
 
-      <ul className="hidden md:flex space-x-6 text-gray-800 font-medium">
+      <ul className="hidden md:flex space-x-6 text-gray-800 font-medium mx-auto">
         <NavLink to="/" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>About Us</NavLink>
         <NavLink to="/services" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Our Service</NavLink>
@@ -73,23 +74,23 @@ const Navbar = ({ setShowProfile }) => {
 
       {/* Mobile Sidebar */}
       {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={() => setIsOpen(false)}></div>}
-      <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform ease-in-out duration-300 z-50`}>
-        <div className="flex justify-between items-center p-4 border-b">
+      <motion.div 
+        initial={{ y: "-100%" }} 
+        animate={{ y: isOpen ? "0%" : "-100%" }} 
+        exit={{ y: "-100%" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 p-4 rounded-b-2xl"
+      >
+        <div className="flex justify-between items-center border-b pb-2">
           <h2 className="text-lg font-semibold">Menu</h2>
           <button onClick={() => setIsOpen(false)} className="text-gray-800">
             <CloseIcon fontSize="large" />
           </button>
         </div>
 
-        {/* Profile Picture for Logged-in User */}
-        {isAuthenticated && (
-          <div className="flex flex-col items-center py-4 border-b">
-            <img src={user?.profilePic || avtar} alt="Profile" className="w-16 h-16 rounded-full object-cover mb-2" />
-            <p className="text-sm font-medium">{user?.name || "User"}</p>
-          </div>
-        )}
+     
 
-        <ul className="flex flex-col space-y-4 p-4 text-gray-800 font-medium">
+        <ul className="flex flex-col items-center space-y-4 p-4 text-gray-800 font-medium">
           {isAuthenticated ? (
             <NavLink onClick={handleProfile}>Profile</NavLink>
           ) : (
@@ -105,7 +106,7 @@ const Navbar = ({ setShowProfile }) => {
             <button onClick={handleLogout} className="mt-4 bg-red-500 text-white px-4 py-2 rounded-full font-medium shadow-md hover:bg-red-600 w-full">Logout</button>
           )}
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };
