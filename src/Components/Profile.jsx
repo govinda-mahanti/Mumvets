@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import profilepic from "../assets/Rectangle 2441.svg";
 import CloseIcon from "@mui/icons-material/Close";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import axios from "axios";
 import { logOut } from "../redux/authSlice";
 import { useSelector, useDispatch } from "react-redux";
@@ -30,11 +31,10 @@ const Profile = ({ setShowProfile }) => {
     try {
       const response = await axios.get(`${BASE_URL}/api/getUser`, {
         headers: {
-          Authorization: `${token}`,
+          Authorization: token,
           "Content-Type": "application/json",
         },
       });
-      console.log("Fetched User Data:", response.data.userData);
       setUserData(response.data.userData);
       setUpdatedData(response.data.userData);
     } catch (error) {
@@ -63,25 +63,19 @@ const Profile = ({ setShowProfile }) => {
       formData.append("address", updatedData.address || "");
 
       if (file) {
-        console.log("File Selected:", file);
         formData.append("photo", file);
-      }
-
-      console.log("Form Data Before Sending:");
-      for (let [key, value] of formData.entries()) {
-        console.log(key, value);
       }
 
       await axios.put(`${BASE_URL}/api/updateProfile`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `${token}`,
+          Authorization: token,
         },
       });
 
       alert("Profile updated successfully!");
       setEditMode(false);
-      fetchUserData(); // 🔥 Fetch updated data immediately!
+      fetchUserData();
     } catch (error) {
       console.error("Profile Update Failed:", error);
       alert("Profile update failed!");
@@ -93,12 +87,20 @@ const Profile = ({ setShowProfile }) => {
       <div className="bg-white flex flex-col md:flex-row rounded-2xl shadow-lg overflow-hidden w-full max-w-[800px]">
         <div className="w-full md:w-1/2 bg-gray-200 flex justify-center items-center relative">
           <img
-            // src={updatedData?.photo || profilepic}
-            src={profilepic}
-
+            src={updatedData?.photo || profilepic}
             alt="Profile"
             className="w-full object-cover h-[300px] md:h-[500px]"
           />
+          {editMode && (
+            <label className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer">
+              <PhotoCameraIcon className="text-gray-700" />
+              <input
+                type="file"
+                className="hidden"
+                onChange={handleFileChange}
+              />
+            </label>
+          )}
           <div className="cursor-pointer absolute top-2 right-2 block md:hidden">
             <CloseIcon onClick={handleClose} />
           </div>
@@ -170,18 +172,15 @@ const Profile = ({ setShowProfile }) => {
             )}
           </div>
 
-          {/* {editMode && (
-            <input type="file" onChange={handleFileChange} className="mb-4" />
-          )} */}
-
           <div className="w-full md:w-auto md:absolute md:bottom-4 md:right-4 flex">
-            <button
-              className="bg-black text-white px-4 py-2 rounded-lg mt-4 hidden md:flex cursor-pointer "
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-
+            {!editMode && (
+              <button
+                className="bg-black text-white px-4 py-2 rounded-lg mt-4 hidden md:flex cursor-pointer"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            )}
             <button
               className="bg-black text-white px-4 py-2 rounded-lg mt-4 ml-4 cursor-pointer"
               onClick={editMode ? updateProfile : () => setEditMode(true)}

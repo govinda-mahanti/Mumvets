@@ -80,16 +80,16 @@ const Contactus = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <span>📞</span>
-              <p className="text-md">+7050506400</p>
+              <p className="text-md">+91932647153</p>
             </div>
             <div className="flex items-center space-x-2">
               <span>✉️</span>
-              <p className="text-md">demo@gmail.com</p>
+              <p className="text-md">mumvets@gmail.com</p>
             </div>
             <div className="flex items-center space-x-2">
               <span>📍</span>
               <p className="text-md">
-                132 Dartmouth Street Boston, Massachusetts 02156 United States
+              Goregaon West
               </p>
             </div>
           </div>
