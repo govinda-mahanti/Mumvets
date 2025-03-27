@@ -12,7 +12,7 @@ import { BASE_URL } from "../Utils/urlconfig";
 const Aboutus = () => {
   const doctors = [
     {
-      name: "Dr. Maunish Sharma",
+      name: "Dr. Mounish Sharma",
       degree: "BVSc. & AH",
       image: img1, // Update image paths
     },
