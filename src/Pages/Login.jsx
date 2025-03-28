@@ -25,9 +25,10 @@ const Login = () => {
     setLoading(true);
 
     try {
+      console.log(formData)
       const response = await axios.post(`${BASE_URL}/auth/login`, formData);
       const { token, user } = response.data;
-
+      console.log(response.data)
       dispatch(setCredentials({ user, token }));
 
       alert("Login successful!");

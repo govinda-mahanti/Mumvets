@@ -35,6 +35,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
+      console.log(formData)
       const response = await axios.post(`${BASE_URL}/auth/register`, formData);
       const { token, user } = response.data;
 
