@@ -77,7 +77,9 @@ const Footer = () => {
                 <a href="">
                   <img src={tiktok} alt="" className="w-8" />
                 </a>
-                <a href="https://www.instagram.com/mumvets1?igsh=a3M4NnYzdTc2Yzcy">
+                <a href="https://www.instagram.com/mumvets1?igsh=a3M4NnYzdTc2Yzcy"
+                target="_blank"
+                >
                   <img src={insta} alt="" className="w-8" />
                 </a>
               </div>
