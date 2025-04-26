@@ -23,10 +23,6 @@ import PetVaccination from "./Pages/PetVaccination";
 function App() {
   return (
     <>
-     https://mumvets.com/pet-grooming-at-home-in-mumbai
-     https://mumvets.com/online-vet-consultation
-     https://mumvets.com/vet-home-visit
-     https://mumvets.com/pet-vaccinations-at-home/
 
     <Router>
       <Routes>
