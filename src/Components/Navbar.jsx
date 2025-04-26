@@ -51,6 +51,7 @@ const Navbar = ({ setShowProfile }) => {
         <NavLink to="/services" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Our Service</NavLink>
         <button onClick={handleBooking} className="hover:text-orange-500">Tracking</button>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Contact</NavLink>
+        <a href="https://blogs.mumvets.com/" target="_blank" className="hover:text-orange-500" >Blog</a>
       </ul>
 
       <div className="hidden md:flex items-center space-x-4">

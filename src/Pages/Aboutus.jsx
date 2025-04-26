@@ -107,6 +107,9 @@ const Aboutus = () => {
         </div>
       </div>
 
+
+
+
       <div className="bg-[#F19A56] py-8 px-2 md:px-12 lg:px-20 text-center w-[90%] md:w-[80%] rounded-4xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
@@ -135,6 +138,34 @@ const Aboutus = () => {
           ))}
         </div>
       </div>
+
+
+
+
+      <div className="py-12 px-6 md:w-[80%] mx-auto text-center">
+      {/* Title */}
+      <div className="flex flex-col items-center mb-6">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">🐾</span>
+          <h2 className="text-3xl md:text-4xl font-semibold">About Us</h2>
+        </div>
+      </div>
+
+      {/* Description */}
+      <p className="text-gray-700 text-sm md:text-lg mx-auto leading-relaxed">
+        Established by a group of dedicated veterinary experts, MumVets combines years of clinical 
+        practice, medical knowledge, and a love for animals. We recognize the special needs of city 
+        pet parenting, particularly in a fast-paced city like Mumbai. That’s why we’ve designed our model 
+        on at-home vet services—to make pet care easier, safer, and much more convenient. <br /><br />
+        Our veterinarians are not just medically qualified but also gentle handling trained, 
+        fear-free pet handling experts, and home diagnosticians. From home pet vaccination services 
+        to diagnostics, to pet grooming at home in Mumbai, MumVets is your home veterinary care stop.
+      </p>
+    </div>
+
+
+
+
 
       <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mt-10 w-[80%] mx-auto">
         Join Our <span className="text-orange-600">Team</span>

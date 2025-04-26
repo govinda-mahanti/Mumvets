@@ -10,7 +10,6 @@ import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 import sarger from "../assets/serviece/sarger 1.svg";
 import terapy from "../assets/serviece/terapy 1.svg";
 import ser from "../assets/serviece/ser 1.svg";
@@ -18,23 +17,21 @@ import arrow from "../assets/serviece/Arrow_right_long.svg";
 
 import pawss1 from "../assets/home/pawss 3.png";
 import pawss2 from "../assets/home/pawss 4.png";
-import pawss from "../assets/pawss 7.svg"
+import pawss from "../assets/pawss 7.svg";
 
 const Service = () => {
   const navigate = useNavigate();
 
   const token =
-  useSelector((state) => state.auth.token) || localStorage.getItem("token");
-const handleBooking = () => {
-  if (token) {
-    navigate("/booking");
-  } else {
-    navigate("/login");
-  }
-};
+    useSelector((state) => state.auth.token) || localStorage.getItem("token");
+  const handleBooking = () => {
+    if (token) {
+      navigate("/booking");
+    } else {
+      navigate("/login");
+    }
+  };
   return (
-
-
     <div>
       {/* <div className="grid grid-cols-5 grid-rows-4 gap-4">
     <div className="col-span-5">1</div>
@@ -54,20 +51,16 @@ const handleBooking = () => {
               alt="Mumvets Logo"
               className="h-30 w-auto md:h-[150px] md:mb-5 z-1"
             />
-            <img src={ pawss} alt="" className="absolute top-5 right-1.5"/>
-            <img src={ pawss} alt="" className="absolute top-20 right-5"/>
-            <img src={ pawss} alt="" className="absolute left-6"/>
+            <img src={pawss} alt="" className="absolute top-5 right-1.5" />
+            <img src={pawss} alt="" className="absolute top-20 right-5" />
+            <img src={pawss} alt="" className="absolute left-6" />
 
             <button
               className="z-1 bg-white text-black px-3 py-2 md:px-6 md:py-2 rounded-full shadow-md cursor-pointer text-md md:text-2xl flex items-center justify-center gap-1"
               onClick={handleBooking}
             >
               Home Vet Service
-              <img
-                src={arrow}
-                alt="arrow"
-                className="w-6 h-6"
-              />
+              <img src={arrow} alt="arrow" className="w-6 h-6" />
             </button>
           </div>
           <img src={cat} alt="Mumvets Logo" className="h-full" />
@@ -93,13 +86,11 @@ const handleBooking = () => {
               alt="Vet with Dog"
               className="h-32 md:h-full rounded-[1.5rem] shadow-lg"
             />
-            <button className=" mt-5 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
-              onClick={handleBooking}>
-              <img
-                src={arrow}
-                alt="arrow"
-                className="w-6 h-6"
-              />
+            <button
+              className=" mt-5 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
+              onClick={() => navigate("/vet-home-visit")}
+              >
+              <img src={arrow} alt="arrow" className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -111,8 +102,9 @@ const handleBooking = () => {
             alt="Vet"
             className="h-full w-full object-cover rounded-[2rem]"
           />
-          <button className="w-12 h-12 flex items-center justify-center absolute top-3 right-2 rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
-            onClick={handleBooking}
+          <button
+            className="w-12 h-12 flex items-center justify-center absolute top-3 right-2 rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
+            onClick={() => navigate("/pet-vaccinations-at-home")}
           >
             <img src={arrow} alt="arrow" className="w-6 h-6" />
           </button>
@@ -131,8 +123,9 @@ const handleBooking = () => {
             alt="Vet Consultation"
             className="h-24 md:h-full rounded-lg bottom-6 right-6"
           />
-          <button className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border cursor-pointer"
-          onClick={() => navigate("/vetconsultation")}
+          <button
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border cursor-pointer"
+            onClick={() => navigate("/online-vet-consultation")}
           >
             <img src={arrow} alt="arrow" className="w-6 h-6" />
           </button>
@@ -160,8 +153,9 @@ const handleBooking = () => {
               alt="Vet with Dog"
               className="h-32 md:h-full rounded-[1.5rem] shadow-lg"
             />
-            <button className="mt-5 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
-                onClick={() => navigate("/petgrooming")}
+            <button
+              className="mt-5 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
+              onClick={() => navigate("/pet-grooming-at-home-in-mumbai")}
             >
               <img src={arrow} alt="arrow" className="w-6 h-6" />
             </button>
@@ -174,7 +168,8 @@ const handleBooking = () => {
             alt="Vet"
             className="w-full h-full object-cover rounded-lg"
           />
-          <button className=" absolute top-3 right-3 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
+          <button
+            className=" absolute top-3 right-3 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
             onClick={handleBooking}
           >
             <img src={arrow} alt="arrow" className="w-6 h-6" />
@@ -207,16 +202,43 @@ const handleBooking = () => {
             alt="Pet Boarding"
             className="h-32 md:h-[320px] rounded-[1.5rem] shadow-lg"
           />
-          <button className="md:ml-5 mt-5 min-w-12 min-h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
+          <button
+            className="md:ml-5 mt-5 min-w-12 min-h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-[#6A7AFF] cursor-pointer"
             onClick={handleBooking}
           >
             <img src={arrow} alt="arrow" className="w-6 h-6" />
           </button>
-          <img src={ pawss} alt="" className="absolute top-2 left-[200px]"/>
-
+          <img src={pawss} alt="" className="absolute top-2 left-[200px]" />
         </div>
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* /////////////// Section 2 //////////////// */}
       <div className="flex justify-between items-center md:mb-5 md:w-[80%] md:flex-row flex-col mx-auto">
         <h2 className="text-3xl font-bold text-gray-800">
           Our Company Services
@@ -238,7 +260,8 @@ const handleBooking = () => {
               We offer spay and neuter surgery from highly experienced vet
               surgeons at your doorstep.
             </p>
-            <button className="cursor-pointer mt-4 bg-white text-[#6A7AFF] px-4 py-2 rounded-lg font-semibold"
+            <button
+              className="cursor-pointer mt-4 bg-white text-[#6A7AFF] px-4 py-2 rounded-lg font-semibold"
               onClick={handleBooking}
             >
               Book Now
@@ -285,7 +308,7 @@ const handleBooking = () => {
             </p>
             <button
               className="cursor-pointer mt-4 bg-white text-[#6A7AFF] px-4 py-2 rounded-lg font-semibold"
-              onClick={() => navigate("/petgrooming")}
+              onClick={() => navigate("/pet-grooming-at-home-in-mumbai")}
             >
               Read More
             </button>
@@ -303,8 +326,14 @@ const handleBooking = () => {
               We offer all kinds of vaccines for your pets with a proper vaccine
               certificate.
             </p>
-            <p className=" mt-1"><span className="text-black font-semibold">Dog vaccine:</span> Antirabies, 9 in 1, corona, kennel cough.</p>
-            <p className=" mt-1"><span className="text-black font-semibold">Cat vaccine:</span> Anti rabies, CRP, corona.</p>
+            <p className=" mt-1">
+              <span className="text-black font-semibold">Dog vaccine:</span>{" "}
+              Antirabies, 9 in 1, corona, kennel cough.
+            </p>
+            <p className=" mt-1">
+              <span className="text-black font-semibold">Cat vaccine:</span>{" "}
+              Anti rabies, CRP, corona.
+            </p>
             <button
               className="cursor-pointer mt-4 bg-white text-[#6A7AFF] px-4 py-2 rounded-lg font-semibold"
               onClick={handleBooking}
@@ -323,9 +352,9 @@ const handleBooking = () => {
               have questions about your pet’s diet, behavior, or symptoms, our
               licensed veterinarians are here to help.
             </p>
-            <button className="cursor-pointer mt-4 bg-black text-white px-4 py-2 rounded-lg font-semibold"
-              onClick={() => window.location.href = "tel:+919326471539"}
-
+            <button
+              className="cursor-pointer mt-4 bg-black text-white px-4 py-2 rounded-lg font-semibold"
+              onClick={() => (window.location.href = "tel:+919326471539")}
             >
               Call Now
             </button>
