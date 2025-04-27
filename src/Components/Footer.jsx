@@ -66,7 +66,7 @@ const Footer = () => {
           <h2 className="text-lg font-semibold underline">
             Join an Online Community of 1000+ Pet Parents in Mai
           </h2>
-          <div className="flex justify-evenly gap-6 mt-6 p-6 rounded-xl">
+          <div className="flex flex-col md:flex-row justify-evenly gap-6 mt-6 p-6 rounded-xl">
             {/* Social & Branding Section */}
             <div className="flex flex-col items-center md:items-start w-full md:w-1/4">
               <p className="mt-2 text-lg font-semibold text-center md:text-left">
