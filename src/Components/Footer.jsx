@@ -110,10 +110,10 @@ const Footer = () => {
               </h4>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>
-                  <a href="about">About Us</a>
+                  <NavLink to="/about">About Us</NavLink>
                 </li>
                 <li>
-                  <a href="contact">Contact Us</a>
+                  <NavLink to="/contact">Contact Us</NavLink>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>
