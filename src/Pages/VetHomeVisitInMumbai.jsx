@@ -268,9 +268,9 @@ const VetHomeVisitInMumbai = () => {
     Whether it’s a vaccination, a quick check-up, or grooming, we bring vet services at home you can trust.
   </p>
 
-  <h3 class="text-xl font-semibold mb-2">MumVets – Where Care Comes Home</h3>
+  <h3 class="text-xl font-semibold mb-2 text-center">MumVets – Where Care Comes Home</h3>
 
-  <p class="text-gray-700">
+  <p class="text-gray-700 text-center italic font-semibold">
     Because your pets deserve expert treatment in the place they love most—home.
   </p>
 </div>
