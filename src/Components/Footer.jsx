@@ -59,66 +59,150 @@ const Footer = () => {
             src={logo}
             alt="Mumvets Logo"
             className="mx-auto h-16 md:h-[120px]"
-            onClick={()=>{navigate("/")}}
+            onClick={() => {
+              navigate("/");
+            }}
           />
-          <h2 className="text-lg font-semibold text-white underline">
+          <h2 className="text-lg font-semibold underline">
             Join an Online Community of 1000+ Pet Parents in Mai
           </h2>
-          <div className="flex flex-wrap justify-evenly gap-4 mt-6">
-            <div className="flex flex-col items-center md:items-start w-full md:w-1/3">
-              <p className="mt-6 text-lg font-semibold text-center md:text-left">
-                Take care of your pets !
+          <div className="flex justify-evenly gap-6 mt-6 p-6 rounded-xl">
+            {/* Social & Branding Section */}
+            <div className="flex flex-col items-center md:items-start w-full md:w-1/4">
+              <p className="mt-2 text-lg font-semibold text-center md:text-left">
+                Take care of your pets!
               </p>
               <p className="text-sm text-gray-700">Befriend Us</p>
               <div className="flex justify-center space-x-4 mt-2">
-                <a href="">
-                  <img src={fb} alt="" className="w-8" />
+                <a href="https://blogs.mumvets.com/" target="_blank">
+                  <img src={fb} alt="Facebook" className="w-8" />
                 </a>
-                <a href="">
-                  <img src={tiktok} alt="" className="w-8" />
-                </a>
-                <a href="https://www.instagram.com/mumvets1?igsh=a3M4NnYzdTc2Yzcy"
-                target="_blank"
+                <a
+                  href="https://www.instagram.com/mumvets1?igsh=a3M4NnYzdTc2Yzcy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <img src={insta} alt="" className="w-8" />
+                  <img src={insta} alt="Instagram" className="w-8" />
+                </a>
+                <a href="https://g.co/kgs/ykqhJqV" target="_blank">
+                  <img
+                    src={tiktok}
+                    alt="TikTok"
+                    className="w-8 bg-white rounded"
+                  />
                 </a>
               </div>
               <a
                 href="https://virtualspheretechnologies.in/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 text-sm text-center md:text-start hidden md:flex cursor-pointer"
               >
                 Powered By Virtualsphere Technologies Pvt Ltd
               </a>
             </div>
-            <button
-              className="bg-gray-500 text-white px-6 py-2 rounded-3xl shadow-md mt-3 h-min cursor-pointer"
-              onClick={() => (window.location.href = "tel:+919326471539")}
-            >
-              Call Now
-            </button>
-            <div className="flex flex-col items-center md:items-end w-full md:w-1/3 mt-4">
-              <div className="flex flex-wrap justify-center items-center space-x-2 md:space-x-4 mt-4">
-                <input
-                  type="text"
-                  placeholder="MailBox"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="border bg-gray-300 px-4 py-2 rounded-lg outline-none w-full md:w-auto"
-                />
-                <button
-                  onClick={handleSubmit}
-                  disabled={loading}
-                  className="bg-pink-300 text-white px-6 py-2 rounded-lg shadow-md mt-4 md:mt-0"
-                >
-                  {loading ? "Sending..." : "Submit"}
-                </button>
-              </div>
-              <p className="text-sm mt-4 text-center md:text-right">
-                © 2025 Mumvets
-              </p>
+
+            {/* Quick Links */}
+            <div className="w-full md:w-1/4 mt-4 md:mt-0">
+              <h4 className="text-base font-semibold text-gray-800 mb-2">
+                Quick Links
+              </h4>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li>
+                  <a href="about">About Us</a>
+                </li>
+                <li>
+                  <a href="contact">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a
+                    href="https://blogs.mumvets.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+  
+            {/* Popular Services */}
+            <div className="w-full md:w-1/4 mt-4 md:mt-0">
+              <h4 className="text-base font-semibold text-gray-800 mb-2">
+                Our Popular Services
+              </h4>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li>
+                  <a
+                    href="/pet-grooming-at-home-in-mumbai"
+                    rel="noopener noreferrer"
+                  >
+                    Pet Grooming at Home in Mumbai
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/online-vet-consultation"
+                    rel="noopener noreferrer"
+                  >
+                    Online Vet Consultation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/vet-home-visit"
+                    rel="noopener noreferrer"
+                  >
+                    Vet Home Visit
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pet-vaccinations-at-home/"
+                
+                    rel="noopener noreferrer"
+                  >
+                    Pet Vaccinations at Home
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Call Now Button */}
+            <div className="flex justify-center items-center w-full md:w-auto mt-4">
+              <input
+                type="text"
+                placeholder="MailBox"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="border bg-gray-300 px-4 py-2 rounded-lg outline-none w-full md:w-auto"
+              />
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="bg-pink-300 text-white px-6 py-2 rounded-lg shadow-md"
+              >
+                {loading ? "Sending..." : "Submit"}
+              </button>
             </div>
           </div>
+
+          {/* Newsletter & Copyright */}
+            <div className="flex flex-wrap justify-center items-center gap-2">
+              <button
+                className="bg-gray-500 text-white px-6 py-2 rounded-3xl shadow-md h-min cursor-pointer"
+                onClick={() => (window.location.href = "tel:+919326471539")}
+              >
+                Call Now
+              </button>
+          </div>
+
           <p className="w-full text-center mt-4">
             Currently serving in 4 cities: Mumbai, Delhi, Bangalore, Gurgaon
           </p>

@@ -10,7 +10,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Group_pic from "../assets/Group 8732.png";
 import { Helmet } from "react-helmet";
-
+import vaccination_pic from "../assets/vaccination.jpg";
 const services = [
   {
     title: "1. Convenient Vet Home Visits",
@@ -128,28 +128,42 @@ const PetVaccination = () => {
           nursing a senior cat, on-time pet vaccination is crucial to save them
           from diseases.
         </p>
+        <div className="flex flex-col md:flex-row justify-between items-start  gap-6  mx-auto">
+  {/* Text Section */}
+  <div className="w-full md:w-1/2 mt-5">
+    <h3 className="text-lg md:text-xl font-semibold text-black md:ml-4">
+      Services we offer
+    </h3>
 
-        <h3 className="md:ml-8 mt-4 text-lg md:text-xl font-semibold">
-          Services we offer
-        </h3>
+    <ul className="mt-4 md:ml-4 list-disc list-inside space-y-2 text-sm md:text-base text-white">
+      <li>Dog Vaccination at Home</li>
+      <li>Cat Vaccinations</li>
+      <li>Regular Vet Home Visits</li>
+      <li>Full Home Veterinary Services throughout Mumbai</li>
+      <li>Provided by caring, licensed veterinary doctors</li>
+      <li>Clinic-quality care at your home</li>
+    </ul>
 
-        <ul className="md:ml-8 mt-2 list-disc list-inside space-y-1 text-sm md:text-base text-white">
-          <li>Dog Vaccination at Home</li>
-          <li>Cat Vaccinations</li>
-          <li>Regular Vet Home Visits</li>
-          <li>Full Home Veterinary Services throughout Mumbai</li>
-          <li>Provided by caring, licensed veterinary doctors</li>
-          <li>Clinic-quality care at your home</li>
-        </ul>
+    <div className="mt-6 flex justify-start md:ml-4">
+      <button
+        className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base"
+        onClick={() => (window.location.href = 'tel:+919326471539')}
+      >
+        Call Now
+      </button>
+    </div>
+  </div>
 
-        <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
-          <button
-            className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base w-full sm:w-auto"
-            onClick={() => (window.location.href = "tel:+919326471539")}
-          >
-            Call Now
-          </button>
-        </div>
+  {/* Image Section */}
+  <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+    <img
+      src={vaccination_pic}
+      alt="Vaccination Service"
+      className="rounded-lg w-full max-w-md object-cover shadow-md"
+    />
+  </div>
+</div>
+
 
         <div className="absolute top-10 right-4 flex space-x-2 text-xl md:text-6xl rotate-30">
           <span>🐾</span>
@@ -238,8 +252,6 @@ const PetVaccination = () => {
         </div>
       </div>
 
-      
-
       <div className="py-10 px-5 md:px-20 md:w-[90%] mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
           Why Choose MumVets for Pet Vaccination at Home?
@@ -322,36 +334,51 @@ const PetVaccination = () => {
       </section>
 
       <section className="px-6 py-12 bg-white">
-      <div className="max-w-4xl mx-auto">
-        {/* Pet Care Section */}
+        <div className="max-w-4xl mx-auto">
+          {/* Pet Care Section */}
 
-        {/* Pet Grooming Section */}
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Pet Grooming at Home in Mumbai
-        </h2>
-        <p className="text-lg text-gray-600 mb-8 text-center">
-          Whether it's a nail trim or a full grooming appointment, we bring pet grooming at
-          home in Mumbai to your door, with your pet looking and feeling their best.
-        </p>
+          {/* Pet Grooming Section */}
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Pet Grooming at Home in Mumbai
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 text-center">
+            Whether it's a nail trim or a full grooming appointment, we bring
+            pet grooming at home in Mumbai to your door, with your pet looking
+            and feeling their best.
+          </p>
 
-        {/* How to Book Section */}
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-          How to Book a Pet Doctor Home Visit
-        </h3>
-        <p className="text-lg text-gray-600 mb-6">
-          Booking with MumVets is super simple:
-        </p>
-        <ol className="list-decimal list-inside text-gray-700 space-y-2 mb-8">
-          <li>Visit our website at <a href="https://mumvets.com/" className="text-blue-500 hover:underline">https://mumvets.com/</a></li>
-          <li>Choose your service – vaccination, consultation, or grooming</li>
-          <li>Select your preferred time slot</li>
-          <li>Our vet doctor home visit team will arrive at your home with everything needed</li>
-        </ol>
-        <p className="text-lg text-gray-600">
-          It’s never been easier to give your pets the care they deserve—without stepping out.
-        </p>
-      </div>
-    </section>
+          {/* How to Book Section */}
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            How to Book a Pet Doctor Home Visit
+          </h3>
+          <p className="text-lg text-gray-600 mb-6">
+            Booking with MumVets is super simple:
+          </p>
+          <ol className="list-decimal list-inside text-gray-700 space-y-2 mb-8">
+            <li>
+              Visit our website at{" "}
+              <a
+                href="https://mumvets.com/"
+                className="text-blue-500 hover:underline"
+              >
+                https://mumvets.com/
+              </a>
+            </li>
+            <li>
+              Choose your service – vaccination, consultation, or grooming
+            </li>
+            <li>Select your preferred time slot</li>
+            <li>
+              Our vet doctor home visit team will arrive at your home with
+              everything needed
+            </li>
+          </ol>
+          <p className="text-lg text-gray-600">
+            It’s never been easier to give your pets the care they
+            deserve—without stepping out.
+          </p>
+        </div>
+      </section>
 
       <section className="bg-[#EEEEFF] text-black py-10 px-6 md:px-24 md:w-[75%] mx-auto rounded-2xl mb-10 shadow-xl">
         <div className="max-w-4xl mx-auto">
