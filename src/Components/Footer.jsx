@@ -7,6 +7,7 @@ import insta from "../assets/footer/insta.png";
 import tiktok from "../assets/footer/tiktok.png";
 import { BASE_URL } from "../Utils/urlconfig";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -137,41 +138,30 @@ const Footer = () => {
               <h4 className="text-base font-semibold text-gray-800 mb-2">
                 Our Popular Services
               </h4>
-              <ul className="space-y-1 text-sm text-gray-700">
-                <li>
-                  <a
-                    href="/pet-grooming-at-home-in-mumbai"
-                    rel="noopener noreferrer"
-                  >
-                    Pet Grooming at Home in Mumbai
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/online-vet-consultation"
-                    rel="noopener noreferrer"
-                  >
-                    Online Vet Consultation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/vet-home-visit"
-                    rel="noopener noreferrer"
-                  >
-                    Vet Home Visit
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/pet-vaccinations-at-home/"
-                
-                    rel="noopener noreferrer"
-                  >
-                    Pet Vaccinations at Home
-                  </a>
-                </li>
-              </ul>
+
+<ul className="space-y-1 text-sm text-gray-700">
+  <li>
+    <NavLink to="/pet-grooming-at-home-in-mumbai">
+      Pet Grooming at Home in Mumbai
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/online-vet-consultation">
+      Online Vet Consultation
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/vet-home-visit">
+      Vet Home Visit
+    </NavLink>
+  </li>
+  <li>
+    <NavLink to="/pet-vaccinations-at-home/">
+      Pet Vaccinations at Home
+    </NavLink>
+  </li>
+</ul>
+
             </div>
 
             {/* Call Now Button */}
