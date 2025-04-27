@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Helmet } from "react-helmet";
+
 const Vetconsultation = () => {
 
 
@@ -46,6 +48,8 @@ const Vetconsultation = () => {
   
   return (
     <div>
+
+
       <div className="bg-[#8E99F4] p-6 rounded-3xl w-[95%] md:w-[75%] mx-auto relative shadow-lg flex flex-col md:flex-row items-center gap-6 md:p-10 my-10">
         {/* Text Section */}
         <div className="w-full md:w-[50%]">

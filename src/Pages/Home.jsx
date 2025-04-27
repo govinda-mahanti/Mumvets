@@ -16,6 +16,8 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import homeDog1 from "../assets/home/homeDog1.png"
 import homeDog2 from "../assets/home/homeDog2.png"
+import { Helmet } from "react-helmet";
+
 const Home = () => {
   const navigate = useNavigate();
   const testimonials = [
@@ -157,6 +159,9 @@ const Home = () => {
   
   return (
     <div>
+
+
+
       <motion.div
         className="w-full relative rounded-lg md:max-w-[95%] p-10 md:p-0 h-full mt-10 mx-auto flex flex-col md:flex-row items-center"
         initial={{ opacity: 0, y: 50 }}

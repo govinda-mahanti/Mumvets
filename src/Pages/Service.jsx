@@ -18,6 +18,8 @@ import arrow from "../assets/serviece/Arrow_right_long.svg";
 import pawss1 from "../assets/home/pawss 3.png";
 import pawss2 from "../assets/home/pawss 4.png";
 import pawss from "../assets/pawss 7.svg";
+import { Helmet } from "react-helmet";
+
 
 const Service = () => {
   const navigate = useNavigate();

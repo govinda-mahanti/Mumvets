@@ -10,6 +10,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import axios from "axios";
 import { BASE_URL } from "../Utils/urlconfig";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -67,6 +68,9 @@ const Contactus = () => {
   };
   return (
     <div>
+
+
+
       <h2 className="text-3xl font-bold text-center mb-4 mt-8">Contact Us</h2>
       <p className="text-center mb-6">
         Any question or remarks? Just write us a message!

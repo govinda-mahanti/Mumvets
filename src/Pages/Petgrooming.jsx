@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Helmet } from "react-helmet";
+import pet_grooming from "../assets/pet_grooming.jpg"
+
+
 const Petgrooming = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -41,46 +45,47 @@ const Petgrooming = () => {
 
   return (
     <div>
-      <div className="bg-[#8E99F4] p-5 md:p-12 rounded-3xl w-[95%] md:w-[70%] mx-auto relative shadow-lg my-10">
-        <h2 className="text-2xl md:text-3xl font-semibold text-white">
-          Pet Grooming
-        </h2>
-        <p className="mt-2 text-sm md:text-base text-white">
-          Get Your Pet Groomed in the comfort of your couch
-        </p>
 
-        <h3 className="md:ml-8 mt-4 text-lg md:text-xl">
-          What we provide in pet grooming?
-        </h3>
-        <ul className="md:ml-8 mt-2 list-disc list-inside space-y-1 text-sm md:text-base text-white">
-          <li>Expert professional groomer at your doorstep</li>
-          <li>Includes both dog and cat grooming</li>
-          <li>Groomers will handle your pets with love and care</li>
-          <li>We have best and high-quality grooming equipment's</li>
-          <li>
-            Our services include - hair cutting, bathing, dry blow, nail
-            trimming, ear cleaning, eye cleaning, anal gland cleaning
-          </li>
-          <li>Pay at home</li>
-        </ul>
+<div className="bg-[#8E99F4] p-5 md:p-12 rounded-3xl w-[95%] md:w-[70%] mx-auto relative shadow-lg my-10">
+  <h2 className="text-2xl md:text-3xl font-semibold text-white">
+    What’s Included in Our Pet Grooming Services?
+  </h2>
+  <p className="mt-2 text-sm md:text-base text-white">
+    Our pet grooming in Mumbai packages are designed for comfort and cleanliness.
+  </p>
 
-        <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
-          <button
-            className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base w-full sm:w-auto"
-            onClick={() => (window.location.href = "tel:+919326471539")}
-          >
-            Call Now
-          </button>
-          {/* <div className="flex space-x-2 mt-4 sm:mt-0">
-          <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">⬅️</button>
-          <button className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">➡️</button>
-        </div> */}
-        </div>
-        <div className="absolute top-10 right-4 flex space-x-2 text-xl md:text-6xl rotate-30">
-          <span>🐾</span>
-          <span>🐾</span>
-        </div>
-      </div>
+  <h3 className="md:ml-8 mt-4 text-lg md:text-xl">
+    Depending on your pet’s breed and size, we offer:
+  </h3>
+  <ul className="md:ml-8 mt-2 list-disc list-inside space-y-1 text-sm md:text-base text-white">
+    <li>Warm water baths with pet-safe shampoos</li>
+    <li>Fur brushing and de-shedding</li>
+    <li>Nail trimming and paw pad care</li>
+    <li>Ear cleaning</li>
+    <li>Sanitary trimming</li>
+    <li>Full coat grooming and styling (on request)</li>
+  </ul>
+
+  <p className="md:ml-8 mt-4 text-sm md:text-base text-white">
+    We provide home veterinary support if your pet shows any skin issues or discomfort
+    during grooming—just one of the many ways our vet services at home go the extra mile.
+  </p>
+
+  <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
+    <button
+      className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base w-full sm:w-auto"
+      onClick={() => (window.location.href = "tel:+919326471539")}
+    >
+      Call Now
+    </button>
+  </div>
+
+  <div className="absolute top-10 right-4 flex space-x-2 text-xl md:text-6xl rotate-30">
+    <span>🐾</span>
+    <span>🐾</span>
+  </div>
+</div>
+
 
       <div className="flex items-center justify-center p-6 w-[90%] md:w-[70%] mx-auto">
         <div className=" text-center">
@@ -201,6 +206,63 @@ const Petgrooming = () => {
           </div>
         </div>
       </div>
+
+
+      <section className="w-full px-6 py-12 md:w-[75%] mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+            Why Choose MumVets for Pet Grooming at Home?
+          </h2>
+
+          <p className="mb-6 text-gray-600">
+            Grooming is not just about your pet looking good, it's an integral part of their health and overall welfare. 
+            Under our home veterinary services, grooming is done under professional supervision who have knowledge 
+            of animal behavior and anatomy. Here's what makes us different:
+          </p>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        
+        {/* Left side - Image */}
+        <div className="w-full md:w-1/2">
+          <img
+            src={pet_grooming} // 👈 Replace this with your actual image link
+            alt="Pet Grooming at Home"
+            className="w-full h-auto rounded-xl shadow-md"
+          />
+        </div>
+
+        {/* Right side - Content */}
+        <div className="w-full md:w-1/2">
+
+          <ul className="space-y-4 text-gray-700">
+            <li className="flex items-start">
+              <span className="text-green-500 mt-1 mr-2">•</span>
+              <div>
+                <strong>Comfort and Familiarity:</strong> Pets are more at ease in their home. 
+                Our pet doctor at home and grooming staff make a soothing, positive experience for your pet.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mt-1 mr-2">•</span>
+              <div>
+                <strong>Personalized Grooming Plans:</strong> We customize every grooming session according to your pet's specific requirements.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mt-1 mr-2">•</span>
+              <div>
+                <strong>Experienced and Gentle Groomers:</strong> Our team collaborates with veterinary doctors in Mumbai to ensure grooming is safe and complete.
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-500 mt-1 mr-2">•</span>
+              <div>
+                <strong>Clean and Trouble-Free:</strong> No more standing in line at salons. Our in-home services are clean, efficient, and stress-free for you and your pet.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
 
       <section className="bg-[#EEEEFF] text-black py-10 px-6 md:px-24 md:w-[75%] mx-auto rounded-2xl mb-10 shadow-xl">
         <div className="max-w-4xl mx-auto">

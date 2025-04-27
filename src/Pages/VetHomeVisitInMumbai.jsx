@@ -7,6 +7,8 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import { Helmet } from "react-helmet";
+import vet_home from "../assets/vet_home.jpg";
 const VetHomeVisitInMumbai = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -49,53 +51,55 @@ const VetHomeVisitInMumbai = () => {
 
   return (
     <div>
-      <div className="bg-[#8E99F4] p-6 rounded-3xl w-[95%] md:w-[75%] mx-auto relative shadow-lg flex flex-col md:flex-row items-center gap-6 md:p-10 my-10">
+  
+      <div className="bg-[#8E99F4] p-6 rounded-3xl w-[95%] md:w-[75%] mx-auto relative shadow-lg items-center gap-6 md:p-10 my-10">
         {/* Text Section */}
-        <div className="w-full md:w-[50%]">
-          <h2 className="text-2xl md:text-3xl font-semibold">
-            Online Vet Consultation
-          </h2>
-          <p className="mt-2 text-sm md:text-base text-white">
+        <h2 className="text-2xl md:text-3xl font-semibold">
+          Vet Home Visit in Mumbai – Expert Care from MumVets
+        </h2>
+        <p className="md:ml-8 mt-4 text-sm md:text-base text-white mb-5 w-[90%]">
+          Your pets are not only animals, but they are members of your family.
+          And like any family member, they ought to be treated with maximum
+          comfort, quality treatment, and copious amounts of love. And that's
+          precisely why we at MumVets, we offer home visit vet services in
+          Mumbai—because great pet care shouldn't involve stressful drives or
+          long wait times at clinics.
+          <br />
+        </p>
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-[50%] flex flex-col justify-center">
+            {/* <p className="mt-2 text-sm md:text-base text-white">
             Get the expert vet consultation near you{" "}
             <strong className="text-black">INR 199</strong>.
-          </p>
+          </p> */}
 
-          <p className="md:ml-8 mt-4 text-lg md:text-xl">
-            When to take online consultation?
-          </p>
-          <p className="md:ml-8 text-sm md:text-base text-white">
-            When your pet is showing these symptoms like - not eating properly:
-          </p>
-          <ul className="md:ml-8 mt-2 list-disc list-inside space-y-1 text-sm md:text-md md:text-base text-white">
-            <li>Vomiting</li>
-            <li>Diarrhea</li>
-            <li>Fever</li>
-            <li>Skin issues</li>
-            <li>Diet & Nutrition plan</li>
-            <li>Vaccination schedule</li>
-            <li>Spay and neuter surgery guide</li>
-            <li>Other health-related queries</li>
-          </ul>
+            <p className="md:ml-8 text-sm md:text-base text-white">
+              Our staff of seasoned veterinary practitioners delivers
+              professional home veterinary care directly to your home. From dog
+              home vaccination to check-ups for wellness and low-level
+              treatments, we make sure that your pet is given one-on-one care in
+              the safety of their own environment.
+            </p>
 
-          <div className="mt-6 flex flex-col sm:flex-row justify-start items-center gap-4">
-            <button
-              className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base"
-              onClick={() => (window.location.href = "tel:+919326471539")}
-            >
-              Call Now
-            </button>
+            <div className="mt-6 flex flex-col sm:flex-row justify-start items-center gap-4">
+              <button
+                className="bg-black text-white py-2 px-6 rounded-full text-sm md:text-base"
+                onClick={() => (window.location.href = "tel:+919326471539")}
+              >
+                Call Now
+              </button>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="w-full md:w-[50%] flex justify-end items-end md:mt-auto">
+            <img
+              src={vet_home}
+              alt="Vet Consultation"
+              className="rounded-lg shadow-lg w-[400px]"
+            />
           </div>
         </div>
-
-        {/* Image Section */}
-        <div className="w-full md:w-[50%] flex justify-end items-end md:mt-auto">
-          <img
-            src={dog}
-            alt="Vet Consultation"
-            className="rounded-lg shadow-lg w-full"
-          />
-        </div>
-
         {/* Decorative Elements */}
         <div className="absolute top-10 right-4 flex space-x-2 text-xl md:text-6xl rotate-30">
           <span>🐾</span>
@@ -104,31 +108,45 @@ const VetHomeVisitInMumbai = () => {
       </div>
 
       <div className="py-10 px-4 md:px-20 md:w-[80%] mx-auto">
+        <h2 className=" text-2xl font-bold mx-auto text-center mb-8">
+          Why Choose MumVets for Vet Services at Home?
+        </h2>
+        <p className=" text-base mb-15">
+          Where convenience and compassion meet, you do not have to worry about
+          running to the clinic or dealing with a stressed pet during your trip
+          to the clinic. Our home veterinary services at MumVets aim to make pet
+          care convenient, accessible, and hassle-free.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           <div className="flex flex-col items-center border rounded-xl p-5">
             <MoreHorizIcon className="text-5xl mb-2" />
-            <h2 className="font-bold">Home Service</h2>
+            <h2 className="font-bold"> Vet Care in Mumbai – At Your Door</h2>
             <p className="text-sm mt-2">
-              Our home veterinary services are tailored according to your pet’s
-              age, lifestyle, and medical history.
+              We provide professional vet home visit Mumbai services to major
+              areas of the city. From Churchgate to Mira Road, irrespective of
+              whether you are in Bandra, Andheri, or Borivali—we&#39;ve got you
+              covered.
             </p>
           </div>
 
           <div className="flex flex-col items-center border rounded-xl p-5">
             <LaptopMacIcon className="text-5xl mb-2" />
-            <h2 className="font-bold">Online consultant</h2>
+            <h2 className="font-bold">
+              Experienced Veterinary Doctor in Mumbai
+            </h2>
             <p className="text-sm mt-2">
-              Consult qualified and registered doctors
+              Our staff consists of some of the finest veterinary doctors in
+              Mumbai, professionally trained to diagnose and treat a variety of
+              conditions with compassion and professionalism.
             </p>
           </div>
 
           <div className="flex flex-col items-center border rounded-xl p-5">
             <InfoOutlinedIcon className="text-5xl mb-2" />
-            <h2 className="font-bold">About Pet vaccination</h2>
+            <h2 className="font-bold">Comfort of Home, Quality of Clinic</h2>
             <p className="text-sm mt-2">
-              At MumVets, our in-home veterinary care staff makes sure that your
-              pet gets vaccinated on time and offers customized tips on how to
-              make your pet healthy for a lifetime.
+              Pets are more calm at home, which allows our pet doctor home visit
+              team to provide effective care without extra stress.
             </p>
           </div>
         </div>
@@ -149,6 +167,13 @@ const VetHomeVisitInMumbai = () => {
       </div>
 
       <div className="relative  py-10 px-4 md:px-20 md:w-[90%] md:mx-auto overflow-hidden">
+        <h2 className=" text-2xl font-bold mx-auto text-center mb-8">
+          What’s Included in Our Home Veterinary Services?
+        </h2>
+        <p className=" text-base mb-15 text-center">
+          We offer a wide range of at home vet services that focus on
+          prevention, early detection, and comfort.
+        </p>
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side Images */}
           <div className="flex flex-col items-center gap-6">
@@ -165,39 +190,94 @@ const VetHomeVisitInMumbai = () => {
           <div className="flex flex-col gap-8">
             <div className="bg-blue-100 p-6 rounded-xl shadow-md">
               <h3 className="font-semibold mb-2">
-                Experienced Veterinary Doctor in Mumbai
+                1. Dog and Cat Vaccination at Home
               </h3>
               <p className="text-sm">
-                Our staff consists of some of the finest veterinary doctors in
-                Mumbai, professionally trained to diagnose and treat a variety
-                of conditions with compassion and professionalism.
+                Protect your pet from preventable diseases. Our pet vaccination
+                services include: <br />
+                ● 7-in-1 Vaccine for Dogs <br />
+                ● Anti-Rabies Vaccine <br />
+                ● Tricat Vaccine for Cats <br />● Vaccinations are administered
+                during scheduled vet doctor home visits after a quick health
+                check to ensure your pet is fit and ready.
               </p>
             </div>
 
             <div className="bg-blue-100 p-6 rounded-xl shadow-md">
               <h3 className="font-semibold mb-2">
-                Vet Care in Mumbai – At Your Door
+                2. General Health Check-ups
               </h3>
               <p className="text-sm">
-                We provide professional vet home visit Mumbai services to major
-                areas of the city. From Churchgate to Mira Road, irrespective of
-                whether you are in Bandra, Andheri, or Borivali—we've got you
-                covered.
+                Regular vet visits are key to long-term pet care in Mumbai. Our
+                home veterinary team conducts thorough health check-ups,
+                monitors weight, screens for common illnesses, and provides
+                parasite control (fleas, ticks, worms).
               </p>
             </div>
 
             <div className="bg-blue-100 p-6 rounded-xl shadow-md">
               <h3 className="font-semibold mb-2">
-                Comfort of Home, Quality of Clinic
+                3. Minor Illness and Injury Care
               </h3>
               <p className="text-sm">
-                Pets are more calm at home, which allows our pet doctor home
-                visit team to provide effective care without extra stress.
+                For small wounds, skin issues, or minor ailments, our vet on
+                call team is just a message away. No need to leave your
+                house—just book a pet doctor at home and we’ll take care of the
+                rest.
+              </p>
+            </div>
+
+            <div className="bg-blue-100 p-6 rounded-xl shadow-md">
+              <h3 className="font-semibold mb-2">4. Senior Pet Support</h3>
+              <p className="text-sm">
+                Older pets have unique needs. From arthritis management to diet
+                changes, our home veterinary services are tailored to provide
+                compassionate care for aging pets.
               </p>
             </div>
           </div>
         </div>
       </div>
+
+
+
+
+      <div class="p-6 rounded-lg md:w-[80%] mx-auto my-10">
+  <h2 class="text-2xl font-bold mb-4">Bonus: Pet Grooming at Home in Mumbai</h2>
+
+  <p class="text-gray-700 mb-6">
+    MumVets also offers <span class="font-semibold">pet grooming at home Mumbai</span> services. Keep your
+    pet clean, stylish, and happy with expert grooming—no travel required.
+    It’s pet pampering made simple.
+  </p>
+
+  <h3 class="text-xl font-semibold mb-2">How to Book a Vet Home Visit</h3>
+
+  <p class="text-gray-700 mb-4">
+    Getting started is easy:
+  </p>
+
+  <ol class="list-decimal list-inside text-gray-700 mb-6 space-y-1">
+    <li>Visit <a href="https://mumvets.com/" target="_blank" class="text-blue-500 underline">https://mumvets.com/</a></li>
+    <li>Choose your service</li>
+    <li>Select a time that suits you</li>
+    <li>Our veterinary doctor home visit team arrives with everything needed</li>
+  </ol>
+
+  <p class="text-gray-700 mb-6">
+    Whether it’s a vaccination, a quick check-up, or grooming, we bring vet services at home you can trust.
+  </p>
+
+  <h3 class="text-xl font-semibold mb-2">MumVets – Where Care Comes Home</h3>
+
+  <p class="text-gray-700">
+    Because your pets deserve expert treatment in the place they love most—home.
+  </p>
+</div>
+
+
+
+
 
       <section className="bg-[#EEEEFF] text-black py-10 px-6 md:px-24 md:w-[75%] mx-auto rounded-2xl mb-10 shadow-xl">
         <div className="max-w-4xl mx-auto">

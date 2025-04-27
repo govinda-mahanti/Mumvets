@@ -8,24 +8,25 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import Group_pic from "../assets/Group 8732.png"
+import Group_pic from "../assets/Group 8732.png";
+import { Helmet } from "react-helmet";
 
 const services = [
   {
-    title: "1. Dog and Cat Vaccination at Home.",
-    back: "Protect your pet from preventable diseases. Vaccinations are administered during scheduled vet doctor home visits after a quick health check to ensure your pet is fit and ready.",
+    title: "1. Convenient Vet Home Visits",
+    back: "No more travel stress or waiting rooms. Our at-home vet services are designed to make life easier for both pets and pet parents.",
   },
   {
-    title: "2. General Health Check-ups",
-    back: "Regular vet visits are key to long-term pet care in Mumbai. Our home veterinary team conducts thorough health check-ups, monitors weight, screens for common illnesses, and provides parasite control (fleas, ticks, worms).",
+    title: "2. Experienced Veterinary Doctors in Mumbai",
+    back: "Our team includes some of the best veterinary doctors in Mumbai, fully qualified and deeply passionate about animal care.",
   },
   {
-    title: "3. Minor Illness and Injury Care",
-    back: "For small wounds, skin issues, or minor ailments, our vet on call team is just a message away. No need to leave your house—just book a pet doctor at home and we’ll take care of the rest.",
+    title: "3. Safe and Stress-Free",
+    back: "Your pet stays in their comfort zone while getting high-quality care through our home veterinary services.",
   },
   {
-    title: "4. Senior Pet Support",
-    back: "Older pets have unique needs. From arthritis management to diet changes, our home veterinary services are tailored to provide compassionate care for aging pets.",
+    title: "4. Reliable Vet on Call",
+    back: "Whether it’s a scheduled vaccination or you need a pet doctor at home for a health concern, we’re just a call away.",
   },
 ];
 
@@ -56,6 +57,31 @@ const faqs = [
       "Yes, we perform oral exams, and cleanings under anesthesia, and offer dental hygiene advice to keep your pet’s teeth and gums healthy.",
   },
 ];
+
+
+const accordionData = [
+  {
+    title: "For Dogs: Puppy DP Vaccines",
+    content:
+      "Starting at 6–8 weeks, your puppy will need multiple rounds of vaccines to guard against parvovirus and distemper.",
+  },
+  {
+    title: "For Dogs: 7-in-1 Vaccine",
+    content:
+      "A combination vaccine that protects against seven common diseases in dogs, including leptospirosis and hepatitis.",
+  },
+  {
+    title: "For Dogs: Anti-Rabies and Kennel Cough Vaccines",
+    content:
+      "Anti-Rabies Vaccine is essential for every dog in Mumbai. Kennel Cough Vaccine is great for dogs who socialize frequently or visit boarding services.",
+  },
+  {
+    title: "For Cats: Tricat and Anti-Rabies Vaccines",
+    content:
+      "Tricat Vaccine protects against feline panleukopenia, herpesvirus, and calicivirus. Anti-Rabies Vaccine is a must-have for all cats, indoor or outdoor.",
+  },
+];
+
 
 const PetVaccination = () => {
   const [faqopenIndex, setFaqOpenIndex] = useState(null);
@@ -131,10 +157,36 @@ const PetVaccination = () => {
         </div>
       </div>
 
+      <section className="w-full px-6 py-12 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+            Why Are Pet Vaccinations Important?
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Preventive care is an essential component for the overall care of
+            your pet's health. Vaccines protect your pets from infectious and
+            potentially life-threatening diseases such as rabies, distemper,
+            parvovirus, feline panleukopenia, and others.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed mb-4">
+            At MumVets, our in-home veterinary care staff makes sure that your
+            pet gets vaccinated on time and offers customized tips on how to
+            make your pet healthy for a lifetime.
+          </p>
+
+          <p className="text-gray-600 leading-relaxed">
+            Whether your puppy is receiving their first round of shots or your
+            adult cat is getting its yearly boosters, we've got you covered with
+            convenient vet doctor home visits in Mumbai.
+          </p>
+        </div>
+      </section>
       <div className="py-10 px-4 md:px-20 text-center relative">
   {/* Heading */}
   <h2 className="text-2xl md:text-4xl font-bold mb-6">
-    Why Choose MumVets for Vet Services at Home?
+    What Vaccinations Does Your Pet Need?
   </h2>
 
   {/* Line with circles */}
@@ -146,83 +198,38 @@ const PetVaccination = () => {
 
   {/* Paragraph */}
   <p className="text-gray-700 max-w-3xl mx-auto mb-10">
-    Where convenience and compassion meet, you do not have to worry about
-    running to the clinic or dealing with a stressed pet during your trip
-    to the clinic. Our home veterinary services at MumVets aim to make pet
-    care convenient, accessible, and hassle-free.
+    Our home veterinary services are tailored according to your pet’s age, lifestyle, and
+    medical history. Here's what we offer:
   </p>
 
   {/* Content Section */}
   <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
     {/* Image */}
     <div className="w-full md:w-1/2 flex items-center justify-center">
-      <img src={Group_pic} alt="Vet Services at Home" className="w-90 object-cover rounded-lg" />
+      <img
+        src={Group_pic}
+        alt="Pet Vaccinations"
+        className="w-90 object-cover rounded-lg"
+      />
     </div>
 
     {/* Accordions */}
     <div className="w-full md:w-1/2 text-left space-y-6 md:pt-15">
-      {/* Item 1 */}
-      <div onClick={() => toggleOpen(0)} className="cursor-pointer">
-        <div className="flex items-center gap-2">
-          {openIndex === 0 ? (
-            <RemoveIcon className="text-black" />
-          ) : (
-            <AddIcon className="text-black" />
+      {accordionData.map((item, index) => (
+        <div key={index} onClick={() => toggleOpen(index)} className="cursor-pointer">
+          <div className="flex items-center gap-2">
+            {openIndex === index ? (
+              <RemoveIcon className="text-black" />
+            ) : (
+              <AddIcon className="text-black" />
+            )}
+            <h3 className="font-semibold">{item.title}</h3>
+          </div>
+          {openIndex === index && (
+            <p className="italic text-pink-500 mt-2">{item.content}</p>
           )}
-          <h3 className="font-semibold">
-            Vet Care in Mumbai – At Your Door
-          </h3>
         </div>
-        {openIndex === 0 && (
-          <p className="italic text-pink-500 mt-2">
-            We provide professional vet home visit Mumbai services to
-            major areas of the city. From Churchgate to Mira Road,
-            irrespective of whether you are in Bandra, Andheri, or
-            Borivali—we’ve got you covered.
-          </p>
-        )}
-      </div>
-
-      {/* Item 2 */}
-      <div onClick={() => toggleOpen(1)} className="cursor-pointer">
-        <div className="flex items-center gap-2">
-          {openIndex === 1 ? (
-            <RemoveIcon className="text-black" />
-          ) : (
-            <AddIcon className="text-black" />
-          )}
-          <h3 className="font-semibold">
-            Experienced Veterinary Doctor in Mumbai
-          </h3>
-        </div>
-        {openIndex === 1 && (
-          <p className="italic text-pink-500 mt-2">
-            Our staff consists of some of the finest veterinary doctors in
-            Mumbai, professionally trained to diagnose and treat a variety
-            of conditions with compassion and professionalism.
-          </p>
-        )}
-      </div>
-
-      {/* Item 3 */}
-      <div onClick={() => toggleOpen(2)} className="cursor-pointer">
-        <div className="flex items-center gap-2">
-          {openIndex === 2 ? (
-            <RemoveIcon className="text-black" />
-          ) : (
-            <AddIcon className="text-black" />
-          )}
-          <h3 className="font-semibold">
-            Comfort of Home, Quality of Clinic
-          </h3>
-        </div>
-        {openIndex === 2 && (
-          <p className="italic text-pink-500 mt-2">
-            Pets are more calm at home, which allows our pet doctor home
-            visit team to provide effective care without extra stress.
-          </p>
-        )}
-      </div>
+      ))}
     </div>
   </div>
 </div>
@@ -230,7 +237,7 @@ const PetVaccination = () => {
 
       <div className="py-10 px-5 md:px-20 md:w-[90%] mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
-          Our Home Vet Services
+          Why Choose MumVets for Pet Vaccination at Home?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">

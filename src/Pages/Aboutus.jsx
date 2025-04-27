@@ -6,6 +6,7 @@ import img4 from "../assets/about/img4.png";
 import vetu from "../assets/about/vetu 1.png";
 import group from "../assets/about/Group 8728.png";
 import axios from "axios"
+import { Helmet } from "react-helmet";
 
 import { useSelector } from "react-redux";
 import { BASE_URL } from "../Utils/urlconfig";
@@ -73,6 +74,8 @@ const Aboutus = () => {
   };
   return (
     <div>
+
+
       <div className="py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex flex-col justify-center items-center md:mt-5 mb-6 md:mb-0 relative">

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { BASE_URL } from "../Utils/urlconfig";
+import { Helmet } from "react-helmet";
+
 const Booking = () => {
   const [formData, setFormData] = useState({
     ownerName: "",
