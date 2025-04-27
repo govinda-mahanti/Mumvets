@@ -12,10 +12,10 @@ import { useSelector } from "react-redux";
 import right from "../assets/home/right.svg";
 import add from "../assets/home/add.svg";
 import { motion, AnimatePresence } from "framer-motion";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import homeDog1 from "../assets/home/homeDog1.png"
-import homeDog2 from "../assets/home/homeDog2.png"
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import homeDog1 from "../assets/home/homeDog1.png";
+import homeDog2 from "../assets/home/homeDog2.png";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
@@ -109,11 +109,8 @@ const Home = () => {
     }
   };
 
-
-
   // //////////////////////////////////////////////////////////////////////////////////
   const [openIndex, setOpenIndex] = useState(null);
-
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -156,12 +153,9 @@ const Home = () => {
         "Pets should ideally visit the vet at least once a year. Senior pets or those with chronic conditions may require more frequent visits.",
     },
   ];
-  
+
   return (
     <div>
-
-
-
       <motion.div
         className="w-full relative rounded-lg md:max-w-[95%] p-10 md:p-0 h-full mt-10 mx-auto flex flex-col md:flex-row items-center"
         initial={{ opacity: 0, y: 50 }}
@@ -186,12 +180,14 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
           <h1 className="text-[29px] md:text-[64px] font-bold text-gray-800 leading-snug text-right">
-            Veterinary Company <br /> in Mumbai
+            Vet On Call – Home Veterinary Services in Mumbai
           </h1>
           <p className="text-gray-600 mt-2 text-right text-sm md:text-xl">
-            As Mumbai’s leading animal health company, Mumvets is driven by a
-            singular purpose: to nurture Mumbai and humankind by advancing care
-            for animals.
+            At MumVets, we’re of the opinion that each pet deserves a proper
+            care where they feel most comfortable—home. From a speedy check-up
+            to pet vaccination at home or routine rooming, our aim is to provide
+            high-quality vet care in Mumbai that is accessible, reassuring, and
+            easy for pets and their family members alike.
           </p>
 
           {/* Reviews Section */}
@@ -229,9 +225,10 @@ const Home = () => {
               Home Vet Visit
             </h3>
             <p className="text-gray-600  text-sm sm:text-base mt-1 mb-5">
-              We bring the clinic to you! Our home vet visits offer
-              personalized, compassionate care for your pets without the hassle
-              of travel. (Pay at Home)
+              Routine physical exams, behavior consultations, weight monitoring,
+              and more—right at home. we bring the clinic to you! Our home vet
+              visits offer personalized, compassionate care for your pets
+              without the hassle of travel. (Pay at Home)
             </p>
             <button
               className="mt-auto bg-black text-white px-4 py-2 rounded-2xl w-2/3 mx-auto hover:bg-gray-800"
@@ -249,7 +246,7 @@ const Home = () => {
               Online Vet <br className="md:hidden" /> Consultation
             </h3>
             <p className="text-gray-600  text-sm sm:text-base  mt-1">
-              Get the expert vet consultation near you INR 199.
+            Stay up-to-date with pet vaccination services without the trip to the clinic. We follow standard immunization protocols for dogs, cats, and other domestic pets.
             </p>
             <button
               className="mt-auto bg-black text-white px-4 py-2 rounded-2xl w-2/3 mx-auto hover:bg-gray-800"
@@ -267,8 +264,7 @@ const Home = () => {
               Spay & Neuter <br className="md:hidden" /> Surgery
             </h3>
             <p className="text-gray-600  text-sm sm:text-base mt-1">
-              We provide compassionate spay and neuter services to help your pet
-              live a longer, healthier, and happier life.
+            we provide compassionate spay and neuter services to help your pet live a longer, healthier, and happier life
             </p>
             <button
               className="mt-2 md:mt-auto bg-black text-white px-4 py-2 rounded-2xl w-2/3 mx-auto hover:bg-gray-800"
@@ -296,104 +292,107 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="py-12 px-6 md:px-24 text-center md:w-[90%] md:mx-auto">
-      {/* Title */}
-      <div className="flex flex-col items-center">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-3xl">🐾</span>
-          <h2 className="text-3xl md:text-4xl font-semibold">What Services Do We Offer</h2>
-        </div>
-      </div>
-
-      {/* Main content */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-10">
-        {/* Left Side Text */}
-        <div className="text-left space-y-6">
-          <p className="text-gray-700">
-            MumVets provides a wide spectrum of home veterinary services to address all your pet care needs:
-          </p>
-
-          <div className="space-y-4">
-            <div>
-              <p className="font-semibold">- General Health Check-ups</p>
-              <p className="text-gray-600 text-sm">
-                Routine physical exams, behavior consultations, weight monitoring, and more—right at home.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-semibold">- Dog & Cat Vaccinations at Home</p>
-              <p className="text-gray-600 text-sm">
-                Stay up-to-date with pet vaccination services without the trip to the clinic. 
-                We follow standard immunization protocols for dogs, cats, and other domestic pets.
-              </p>
-            </div>
-
-            <div>
-              <p className="font-semibold">- Veterinary Diagnostics</p>
-              <p className="text-gray-600 text-sm">
-                From skin infections to stomach issues, our mobile vets can conduct basic diagnostic tests 
-                and blood tests, or guide you for further lab testing if needed.
-              </p>
-            </div>
+        {/* Title */}
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-3xl">🐾</span>
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              What Services Do We Offer
+            </h2>
           </div>
         </div>
 
-        {/* Right Side Image */}
-        <div className="flex justify-center">
-          <img
-            src={homeDog2}
-            alt="Dog Group"
-            className="w-80 md:w-96 rounded-xl"
-          />
-        </div>
-      </div>
+        {/* Main content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-10">
+          {/* Left Side Text */}
+          <div className="text-left space-y-6">
+            <p className="text-gray-700">
+              MumVets provides a wide spectrum of home veterinary services to
+              address all your pet care needs:
+            </p>
 
-      {/* Bottom content */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-16">
-        {/* Left Image */}
-        <div className="flex justify-center">
-          <img
-            src={homeDog1}
-            alt="Dog Grooming"
-            className="w-60 md:w-115"
-          />
-        </div>
+            <div className="space-y-4">
+              <div>
+                <p className="font-semibold">- General Health Check-ups</p>
+                <p className="text-gray-600 text-sm">
+                  Routine physical exams, behavior consultations, weight
+                  monitoring, and more—right at home.
+                </p>
+              </div>
 
-        {/* Right Text */}
-        <div className="text-left space-y-6">
-          <div className="space-y-4">
-            <div>
-              <p className="font-semibold">- Deworming & Parasite Control</p>
-              <p className="text-gray-600 text-sm">
-                We provide at-home solutions for deworming, tick and flea prevention, 
-                and seasonal treatments tailored to your pet’s needs.
-              </p>
+              <div>
+                <p className="font-semibold">
+                  - Dog & Cat Vaccinations at Home
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Stay up-to-date with pet vaccination services without the trip
+                  to the clinic. We follow standard immunization protocols for
+                  dogs, cats, and other domestic pets.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold">- Veterinary Diagnostics</p>
+                <p className="text-gray-600 text-sm">
+                  From skin infections to stomach issues, our mobile vets can
+                  conduct basic diagnostic tests and blood tests, or guide you
+                  for further lab testing if needed.
+                </p>
+              </div>
             </div>
+          </div>
 
-            <div>
-              <p className="font-semibold">- Pet Grooming at Home (Mumbai)</p>
-              <p className="text-gray-600 text-sm">
-                Nail trimming, bathing, brushing, ear cleaning—we offer hygienic 
-                and safe pet grooming in Mumbai without stepping outside your home.
-              </p>
-            </div>
+          {/* Right Side Image */}
+          <div className="flex justify-center">
+            <img
+              src={homeDog2}
+              alt="Dog Group"
+              className="w-80 md:w-96 rounded-xl"
+            />
+          </div>
+        </div>
 
-            <div>
-              <p className="font-semibold">- Nutrition & Wellness Guidance</p>
-              <p className="text-gray-600 text-sm">
-                Confused about your pet’s diet or supplements? Our vets provide dietary 
-                advice and long-term care plans for all life stages.
-              </p>
+        {/* Bottom content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-16">
+          {/* Left Image */}
+          <div className="flex justify-center">
+            <img src={homeDog1} alt="Dog Grooming" className="w-60 md:w-115" />
+          </div>
+
+          {/* Right Text */}
+          <div className="text-left space-y-6">
+            <div className="space-y-4">
+              <div>
+                <p className="font-semibold">- Deworming & Parasite Control</p>
+                <p className="text-gray-600 text-sm">
+                  We provide at-home solutions for deworming, tick and flea
+                  prevention, and seasonal treatments tailored to your pet’s
+                  needs.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold">- Pet Grooming at Home (Mumbai)</p>
+                <p className="text-gray-600 text-sm">
+                  Nail trimming, bathing, brushing, ear cleaning—we offer
+                  hygienic and safe pet grooming in Mumbai without stepping
+                  outside your home.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold">- Nutrition & Wellness Guidance</p>
+                <p className="text-gray-600 text-sm">
+                  Confused about your pet’s diet or supplements? Our vets
+                  provide dietary advice and long-term care plans for all life
+                  stages.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-
 
       <div className="max-w-6xl mx-auto text-center mt-12 mb-16 px-4">
         <h2 className="text-3xl font-bold mb-6">Testimonials</h2>
@@ -444,7 +443,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
 
       <section className="bg-[#EEEEFF] text-black py-10 px-6 md:px-24 md:w-[75%] mx-auto rounded-2xl mb-10 shadow-xl">
         <div className="max-w-4xl mx-auto">

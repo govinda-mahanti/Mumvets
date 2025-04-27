@@ -58,7 +58,6 @@ const faqs = [
   },
 ];
 
-
 const accordionData = [
   {
     title: "For Dogs: Puppy DP Vaccines",
@@ -81,7 +80,6 @@ const accordionData = [
       "Tricat Vaccine protects against feline panleukopenia, herpesvirus, and calicivirus. Anti-Rabies Vaccine is a must-have for all cats, indoor or outdoor.",
   },
 ];
-
 
 const PetVaccination = () => {
   const [faqopenIndex, setFaqOpenIndex] = useState(null);
@@ -118,28 +116,30 @@ const PetVaccination = () => {
   return (
     <div>
       <div className="bg-[#8E99F4] p-5 md:p-12 rounded-3xl w-[95%] md:w-[70%] mx-auto relative shadow-lg my-10">
-        <h2 className="text-2xl md:text-3xl font-semibold text-white">
-          Pet Grooming
+        <h2 className="text-2xl md:text-3xl font-semibold">
+          Pet Vaccination at Home in Mumbai
         </h2>
 
-        <p className="mt-2 text-sm md:text-base text-white">
-          Get Your Pet Groomed in the comfort of your couch
+        <p className="mt-2 text-sm md:text-base text-white md:w-[90%]">
+          At MumVets, we think your pet's well-being shouldn't be accompanied by
+          stress or long commutes. That's why we bring professional vet services
+          at home– where your beloved pet feels most comfortable. If you've
+          recently adopted a puppy and welcomed it into your family or are
+          nursing a senior cat, on-time pet vaccination is crucial to save them
+          from diseases.
         </p>
 
         <h3 className="md:ml-8 mt-4 text-lg md:text-xl font-semibold">
-          What we provide in pet grooming?
+          Services we offer
         </h3>
 
         <ul className="md:ml-8 mt-2 list-disc list-inside space-y-1 text-sm md:text-base text-white">
-          <li>expert professional groomer at your doorstep</li>
-          <li>include both dog and cat grooming</li>
-          <li>groomers will handle your pets with love and care</li>
-          <li>we have best and high quality grooming equipment’s</li>
-          <li>
-            our services include - hair cutting, bathing, dry blow , nail
-            trimming, ear cleaning, eye cleaning, anal gland cleaning
-          </li>
-          <li>pay at home</li>
+          <li>Dog Vaccination at Home</li>
+          <li>Cat Vaccinations</li>
+          <li>Regular Vet Home Visits</li>
+          <li>Full Home Veterinary Services throughout Mumbai</li>
+          <li>Provided by caring, licensed veterinary doctors</li>
+          <li>Clinic-quality care at your home</li>
         </ul>
 
         <div className="mt-4 flex flex-col sm:flex-row justify-between items-center">
@@ -157,7 +157,7 @@ const PetVaccination = () => {
         </div>
       </div>
 
-      <section className="w-full px-6 py-12 bg-white">
+      <section className="w-full px-6 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">
             Why Are Pet Vaccinations Important?
@@ -184,56 +184,61 @@ const PetVaccination = () => {
         </div>
       </section>
       <div className="py-10 px-4 md:px-20 text-center relative">
-  {/* Heading */}
-  <h2 className="text-2xl md:text-4xl font-bold mb-6">
-    What Vaccinations Does Your Pet Need?
-  </h2>
+        {/* Heading */}
+        <h2 className="text-2xl md:text-4xl font-bold mb-6">
+          What Vaccinations Does Your Pet Need?
+        </h2>
 
-  {/* Line with circles */}
-  <div className="flex items-center justify-center mb-6 md:w-[80%] mx-auto">
-    <div className="w-4 h-4 border-2 border-pink-400 rounded-full"></div>
-    <div className="border-t border-dotted border-gray-400 flex-grow mx-2"></div>
-    <div className="w-4 h-4 border-2 border-pink-400 rounded-full"></div>
-  </div>
-
-  {/* Paragraph */}
-  <p className="text-gray-700 max-w-3xl mx-auto mb-10">
-    Our home veterinary services are tailored according to your pet’s age, lifestyle, and
-    medical history. Here's what we offer:
-  </p>
-
-  {/* Content Section */}
-  <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-    {/* Image */}
-    <div className="w-full md:w-1/2 flex items-center justify-center">
-      <img
-        src={Group_pic}
-        alt="Pet Vaccinations"
-        className="w-90 object-cover rounded-lg"
-      />
-    </div>
-
-    {/* Accordions */}
-    <div className="w-full md:w-1/2 text-left space-y-6 md:pt-15">
-      {accordionData.map((item, index) => (
-        <div key={index} onClick={() => toggleOpen(index)} className="cursor-pointer">
-          <div className="flex items-center gap-2">
-            {openIndex === index ? (
-              <RemoveIcon className="text-black" />
-            ) : (
-              <AddIcon className="text-black" />
-            )}
-            <h3 className="font-semibold">{item.title}</h3>
-          </div>
-          {openIndex === index && (
-            <p className="italic text-pink-500 mt-2">{item.content}</p>
-          )}
+        {/* Line with circles */}
+        <div className="flex items-center justify-center mb-6 md:w-[80%] mx-auto">
+          <div className="w-4 h-4 border-2 border-pink-400 rounded-full"></div>
+          <div className="border-t border-dotted border-gray-400 flex-grow mx-2"></div>
+          <div className="w-4 h-4 border-2 border-pink-400 rounded-full"></div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
 
+        {/* Paragraph */}
+        <p className="text-gray-700 max-w-3xl mx-auto mb-10">
+          Our home veterinary services are tailored according to your pet’s age,
+          lifestyle, and medical history. Here's what we offer:
+        </p>
+
+        {/* Content Section */}
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          {/* Image */}
+          <div className="w-full md:w-1/2 flex items-center justify-center">
+            <img
+              src={Group_pic}
+              alt="Pet Vaccinations"
+              className="w-90 object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Accordions */}
+          <div className="w-full md:w-1/2 text-left space-y-6 md:pt-15">
+            {accordionData.map((item, index) => (
+              <div
+                key={index}
+                onClick={() => toggleOpen(index)}
+                className="cursor-pointer"
+              >
+                <div className="flex items-center gap-2">
+                  {openIndex === index ? (
+                    <RemoveIcon className="text-black" />
+                  ) : (
+                    <AddIcon className="text-black" />
+                  )}
+                  <h3 className="font-semibold">{item.title}</h3>
+                </div>
+                {openIndex === index && (
+                  <p className="italic text-pink-500 mt-2">{item.content}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      
 
       <div className="py-10 px-5 md:px-20 md:w-[90%] mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">
@@ -298,6 +303,55 @@ const PetVaccination = () => {
           })}
         </div>
       </div>
+      <section className="px-6 py-12 ">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            Pet Care and More – All from Home
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Beyond vaccinations, MumVets offers complete pet care in
+            Mumbai—right from your living room. Our services include:
+          </p>
+          <ul className="text-left list-disc list-inside text-gray-700 space-y-2">
+            <li>Routine Check-Ups</li>
+            <li>Parasite Prevention (ticks, fleas, worms)</li>
+            <li>Home Veterinary Consultations</li>
+            <li>Senior Pet Care</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="px-6 py-12 bg-white">
+      <div className="max-w-4xl mx-auto">
+        {/* Pet Care Section */}
+
+        {/* Pet Grooming Section */}
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Pet Grooming at Home in Mumbai
+        </h2>
+        <p className="text-lg text-gray-600 mb-8 text-center">
+          Whether it's a nail trim or a full grooming appointment, we bring pet grooming at
+          home in Mumbai to your door, with your pet looking and feeling their best.
+        </p>
+
+        {/* How to Book Section */}
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          How to Book a Pet Doctor Home Visit
+        </h3>
+        <p className="text-lg text-gray-600 mb-6">
+          Booking with MumVets is super simple:
+        </p>
+        <ol className="list-decimal list-inside text-gray-700 space-y-2 mb-8">
+          <li>Visit our website at <a href="https://mumvets.com/" className="text-blue-500 hover:underline">https://mumvets.com/</a></li>
+          <li>Choose your service – vaccination, consultation, or grooming</li>
+          <li>Select your preferred time slot</li>
+          <li>Our vet doctor home visit team will arrive at your home with everything needed</li>
+        </ol>
+        <p className="text-lg text-gray-600">
+          It’s never been easier to give your pets the care they deserve—without stepping out.
+        </p>
+      </div>
+    </section>
 
       <section className="bg-[#EEEEFF] text-black py-10 px-6 md:px-24 md:w-[75%] mx-auto rounded-2xl mb-10 shadow-xl">
         <div className="max-w-4xl mx-auto">

@@ -160,14 +160,30 @@ const Vetconsultation = () => {
           </div>
         </div>
       </div>
-
+      <section className="px-6 py-12 md:w-[80%] mx-auto">
+      <div className=" mx-auto text-center">
+        <h1 className="text-3xl font-bold text-gray-800 mb-6">
+          Online Vet Consultation with MumVets – Quality Care from the Comfort of Your Home
+        </h1>
+        <p className="text-base text-black mb-6">
+          Being a pet parent is perhaps the most rewarding experience in the world—but also comes with a fair share of responsibility.
+          At MumVets, we get about the everyday grind and emotional strain of having an unwell pet. That’s why we’ve brought expert
+          home veterinary services in Mumbai within your reach, so your pets get the care in a quick, convenient, and accessible way
+          with online vet consultations—for the comfort of your home in Mumbai.
+        </p>
+        <p className="text-base text-black mb-8">
+          Whether your pet requires medical consultation, regular check-ups, vaccination reminders, or even pet grooming in Mumbai,
+          MumVets is there to assist you with care and compassion.
+        </p>
+      </div>
+    </section>
 
 
 
       <div className="py-12 px-4 md:px-20 md:w-[80%] mx-auto text-center">
       {/* Heading */}
       <h2 className="text-xl md:text-2xl font-semibold italic text-gray-800 mb-10">
-        Home Veterinary Services – For the Times You Need a Hands-On Exam
+        When Should You Choose Online Vet Consultation?
       </h2>
 
       {/* Cards */}
