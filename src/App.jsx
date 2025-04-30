@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<Aboutus />} />
-          <Route path="contact" element={<Contactus />} />
+          <Route path="contact-us" element={<Contactus />} />
           <Route path="booking" element={<Booking />} />
           <Route path="bookingStatus" element={<BookingStatus />} />
           <Route path="services" element={<Service />} />

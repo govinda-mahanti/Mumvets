@@ -50,7 +50,7 @@ const Navbar = ({ setShowProfile }) => {
         <NavLink to="/about" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>About Us</NavLink>
         <NavLink to="/services" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Our Service</NavLink>
         <button onClick={handleBooking} className="hover:text-orange-500">Tracking</button>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Contact</NavLink>
+        <NavLink to="/contact-us" className={({ isActive }) => (isActive ? "text-orange-500 font-semibold" : "hover:text-orange-500")}>Contact</NavLink>
         <a href="https://blogs.mumvets.com/" target="_blank" className="hover:text-orange-500" >Blog</a>
       </ul>
 
@@ -101,7 +101,7 @@ const Navbar = ({ setShowProfile }) => {
           <NavLink to="/about" onClick={() => setIsOpen(false)}>About Us</NavLink>
           <NavLink to="/services" onClick={() => setIsOpen(false)}>Our Service</NavLink>
           <button onClick={handleBooking} className="text-left">Tracking</button>
-          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink to="/contact-us" onClick={() => setIsOpen(false)}>Contact</NavLink>
           <a href="https://blogs.mumvets.com/" target="_blank" className="hover:text-orange-500" >Blog</a>
           <a href="tel:9326471539" onClick={() => setIsOpen(false)}>Call On 9326471539</a>
 
