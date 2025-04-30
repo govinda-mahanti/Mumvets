@@ -75,6 +75,12 @@ const Aboutus = () => {
   return (
     <div>
 
+      <div className="flex flex-col items-center mt-6">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">🐾</span>
+          <h2 className="text-3xl md:text-4xl font-semibold">About Us</h2>
+        </div>
+      </div>
 
       <div className="py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
@@ -147,12 +153,6 @@ const Aboutus = () => {
 
       <div className="py-12 px-6 md:w-[80%] mx-auto text-center">
       {/* Title */}
-      <div className="flex flex-col items-center mb-6">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">🐾</span>
-          <h2 className="text-3xl md:text-4xl font-semibold">About Us</h2>
-        </div>
-      </div>
 
       {/* Description */}
       <p className="text-gray-700 text-sm md:text-lg mx-auto leading-relaxed">
